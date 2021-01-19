@@ -11,10 +11,11 @@ app.listen(port, () => {
     console.log(`listening at ${port}`);
 });
 
-app.use('/', express.static(path.resolve('./public')));
+app.use(express.static(path.join(__dirname, './public')));
 
 app.use(express.json({ limit: '1mb' }));
 
+//get quotes
 app.get('/getQuote', async(request, response) => {
     const quote_url = 'https://api.quotable.io/random?maxLength=120';
     const quote_response = await fetch(quote_url);
@@ -22,10 +23,11 @@ app.get('/getQuote', async(request, response) => {
     response.json(quote_data);
 })
 
+
+//get news 
 const newsapi = require('newsapi');
 const apikey = process.env.API_KEY;
 const news = new newsapi(apikey);
-
 
 news.v2.topHeadlines({
     sources: 'bbc-news,the-verge,abc-news,bloomberg',

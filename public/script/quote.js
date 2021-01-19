@@ -4,8 +4,8 @@ const heart = document.querySelector('.heart')
 const dislike = document.querySelector('.dislike')
 
 async function randomQuote() {
-    const response = await fetch('/getQuote')
-    const data = await response.json()
+    const response = await fetch('/getQuote');
+    const data = await response.json();
 
     if (response.ok) {
         content.innerHTML = data.content;

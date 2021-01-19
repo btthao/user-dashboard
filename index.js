@@ -1,4 +1,5 @@
 const express = require('express');
+const fetch = require('node-fetch');
 require('dotenv').config();
 
 const app = express();
@@ -12,6 +13,12 @@ app.use(express.static('public'));
 
 app.use(express.json({ limit: '1mb' }));
 
+app.get('/getQuote', async(request, response) => {
+    const quote_url = 'https://api.quotable.io/random?maxLength=120';
+    const quote_response = await fetch(quote_url);
+    const quote_data = await quote_response.json();
+    response.json(quote_data);
+})
 
 const newsapi = require('newsapi');
 const apikey = process.env.API_KEY;

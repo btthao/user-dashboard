@@ -14,7 +14,8 @@ app.use(express.json({ limit: '1mb' }));
 
 
 const newsapi = require('newsapi');
-const news = new newsapi(process.env.API_KEY);
+const apikey = process.env.API_KEY;
+const news = new newsapi(apikey);
 
 
 news.v2.topHeadlines({

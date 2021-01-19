@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/560c929ff5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app">
+        <div class="container">
+            <div id="user-area">
+
+                <div class="user">
+                    <p>Hello&nbsp;</p>
+                    <span id="hideText"></span>
+                    <input type="text" value='' class="user-name" autocomplete="off" autocorrect="off">
+                    <span class="edit-name"><i class="fas fa-ellipsis-v"></i></span>
+                    <span class="change">edit name</span>
+                </div>
+
+                <div class="quote">
+                    <div class="section-icon">
+                        <img src="./style/images/quotation.svg" alt="">
+                        <!-- <div>Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+                    </div>
+                    <div class="content-area">
+                        <p class="quote-cont"></p>
+                        <h4 class="quote-author"></h4>
+                        <div>
+                            <span class="heart"><i class="fas fa-heart"></i></span>
+                            <span class="dislike"><i class="fas fa-thumbs-down"></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="news">
+
+                </div>
+
+
+            </div>
+
+            <div id="calendar">
+                <div class="calendar-head">
+                    <span class="prev"><i class="fas fa-angle-left"></i></span>
+                    <h4></h4>
+                    <span class="next"><i class="fas fa-angle-right"></i></span>
+                </div>
+                <div class="calendar-body">
+                    <div class="days">
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                        <div>Sun</div>
+                    </div>
+                    <div class="dates"></div>
+                </div>
+            </div>
+
+            <div id="to-do">
+                <div class="todo-icon"><i class="fas fa-rocket"></i></div>
+
+                <div class='list'>
+                    <h2>Project checklist</h2>
+
+                    <div class="items">
+                    </div>
+
+                    <div class="write-items">
+                        <input type="text" class="write-area" placeholder="Add new task">
+                    </div>
+                </div>
+
+                <div class="record">
+
+                    <div class="stat">
+                        <p><span id="finished"></span></p>
+                        <div class="progress">
+                            <div class="progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <div class="stat-bg"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./script/calendar.js"></script>
+    <script src="./script/user.js"></script>
+    <script src="./script/todolist.js"></script>
+    <script src="./script/quote.js"></script>
+    <script src="./script/news.js"></script>
+
+</body>
+
+</html>

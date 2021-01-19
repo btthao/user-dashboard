@@ -11,7 +11,7 @@ app.listen(port, () => {
     console.log(`listening at ${port}`);
 });
 
-app.use('/', express.static(__dirname + '/public'));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.use(express.json({ limit: '1mb' }));
 

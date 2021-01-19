@@ -4,7 +4,7 @@ const heart = document.querySelector('.heart')
 const dislike = document.querySelector('.dislike')
 
 async function randomQuote() {
-    const response = await fetch('https://focused-mclean-e083c9.netlify.app/getQuote');
+    const response = await fetch('../getQuote');
     const data = await response.json();
 
     if (response.ok) {

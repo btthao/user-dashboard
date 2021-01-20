@@ -5,10 +5,8 @@ require('dotenv').config();
 const path = require('path');
 const app = express();
 const port = process.env.PORT || 3000;
-const http = require('http');
-const server = http.Server(app);
 
-server.listen(port, () => {
+app.listen(port, () => {
     console.log(`listening at ${port}`);
 });
 

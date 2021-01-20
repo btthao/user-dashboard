@@ -7,7 +7,7 @@ async function randomQuote() {
     const response = await fetch('/getQuote');
     const data = await response.json();
 
-    if (data) {
+    if (response.ok) {
         content.innerHTML = data.content;
         author.innerHTML = data.author;
     } else {

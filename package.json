@@ -1,26 +1,30 @@
 {
-  "name": "userdashboard",
-  "version": "1.0.0",
-  "description": "A personal dashboard",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "quote",
-    "and",
-    "news",
-    "api",
-    "calendar",
-    "todo",
-    "list"
-  ],
-  "author": "Thao Bui",
-  "license": "ISC",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "newsapi": "^2.4.1",
-    "node-fetch": "^2.6.1"
-  }
+    "name": "userdashboard",
+    "version": "1.0.0",
+    "description": "A personal dashboard",
+    "main": "index.js",
+
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "quote",
+        "and",
+        "news",
+        "api",
+        "calendar",
+        "todo",
+        "list"
+    ],
+    "author": "Thao Bui",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "newsapi": "^2.4.1",
+        "node-fetch": "^2.6.1"
+    },
+    "engines": {
+        "node": "14.x"
+    }
 }

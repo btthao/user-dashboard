@@ -60,11 +60,12 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 
@@ -99,11 +100,12 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 
@@ -220,11 +222,12 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 
@@ -250,7 +253,6 @@ html {
 
 #user-area .quote .content-area p {
   font-size: 1.6rem;
-  letter-spacing: 0.1rem;
   color: #081930;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
@@ -298,11 +300,12 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 
@@ -391,11 +394,12 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 
@@ -554,11 +558,12 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 
@@ -678,19 +683,20 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 
 #to-do .list .write-items::after {
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
-  -webkit-filter: blur(6px);
-          filter: blur(6px);
+  -webkit-filter: blur(0.6rem);
+          filter: blur(0.6rem);
 }
 
 #to-do .list .write-items .write-area {
@@ -770,11 +776,12 @@ html {
   right: 0;
   bottom: 0;
   margin: -10rem;
+  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(1rem);
+          filter: blur(1rem);
   z-index: -1;
 }
 

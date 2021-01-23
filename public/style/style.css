@@ -439,8 +439,7 @@ html {
   -ms-grid-rows: 0.8fr 5fr;
       grid-template-rows: 0.8fr 5fr;
   z-index: 1;
-  border-bottom-left-radius: 1.5rem;
-  border-bottom-right-radius: 1.5rem;
+  background: transparent;
 }
 
 #calendar .calendar-body .days {

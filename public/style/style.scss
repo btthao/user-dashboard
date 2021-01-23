@@ -7,7 +7,6 @@
     $pink2:#df647b;
     $dark: rgb(8, 25, 48);
     $grey: #918e8e;
-    $borderR: 1.5rem;
     * {
         margin: 0;
         padding: 0;
@@ -25,7 +24,7 @@
     @mixin default {
         width: 100%;
         height: 100%;
-        border-radius: $borderR;
+        border-radius: 1.5rem;
         background: inherit;
         position: relative;
         box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
@@ -39,7 +38,7 @@
             right: 0;
             bottom: 0;
             margin: -10rem;
-            border-radius: $borderR;
+            border-radius: 1.5rem;
             background: inherit;
             box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
             filter: blur(1rem);
@@ -265,8 +264,7 @@
             display: grid;
             grid-template-rows: 0.8fr 5fr;
             z-index: 1;
-            border-bottom-left-radius: $borderR;
-            border-bottom-right-radius: $borderR;
+            background: transparent;
             .days {
                 display: flex;
                 width: 100%;

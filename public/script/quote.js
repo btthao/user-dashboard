@@ -20,9 +20,10 @@ async function randomQuote() {
 randomQuote()
 
 heart.onclick = () => {
-    heart.classList.toggle('like')
+    heart.classList.toggle('like');
 }
 
 dislike.onclick = () => {
-    randomQuote()
+    randomQuote();
+    heart.classList.remove('like');
 }

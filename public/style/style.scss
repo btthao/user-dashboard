@@ -1,4 +1,4 @@
-    //color & border
+    //variables
     $pink: #ee8f8a;
     $blue: #8aace0;
     $blue1:#816ad3;
@@ -13,6 +13,7 @@
         padding: 0;
         box-sizing: border-box;
         font-family: Arial, Helvetica, sans-serif;
+        -webkit-tap-highlight-color: transparent;
     }
     
     html {
@@ -24,9 +25,10 @@
     @mixin default {
         width: 100%;
         height: 100%;
+        border-radius: $borderR;
         background: inherit;
         position: relative;
-        box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
         overflow: hidden;
         z-index: 1;
         &::after {
@@ -47,10 +49,9 @@
     .app {
         min-width: 100vw;
         min-height: 100vh;
-        width: max-content;
-        height: max-content;
+        width: fit-content;
+        height: fit-content;
         background-attachment: fixed;
-        background: $pink;
         background-image: linear-gradient(250deg, $pink 0%, $blue 100%);
         padding: 2rem;
         display: grid;
@@ -64,418 +65,418 @@
         place-items: center;
         height: 64rem;
         width: 102rem;
-        border-radius: $borderR;
         grid-template-columns: 62rem 40rem;
         grid-template-rows: 28rem 36rem;
         grid-template-areas: 'user-area calendar''user-area todo';
-        #user-area {
-            @include default;
-            grid-area: user-area;
-            display: grid;
-            grid-template-rows: 3rem 14rem 31rem;
-            padding: 4rem;
-            grid-gap: 4rem;
-            &::after {
-                box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.15);
-            }
-            .user {
-                display: flex;
-                align-items: center;
-                color: white;
-                font-family: 'Raleway', sans-serif;
-                font-size: 5rem;
-                font-weight: 900;
-                letter-spacing: 0.1rem;
-                position: relative;
-                width: fit-content;
-                padding-right: 2rem;
-                &:hover {
-                    .edit-name {
-                        visibility: visible;
-                    }
-                }
-                p {
-                    font: inherit;
-                }
-                #hideText {
-                    font: inherit;
-                    position: absolute;
-                    height: 0;
-                    min-width: 10rem;
-                    overflow: hidden;
-                    white-space: pre;
-                    letter-spacing: 0.2rem;
-                }
-                .user-name {
-                    border: none;
-                    outline: none;
-                    background: transparent;
-                    border-bottom: 1px solid $blue;
-                    font: inherit;
-                    letter-spacing: 0.2rem;
-                    width: 10rem;
-                    max-width: 30rem;
-                    color: $blue1;
-                    text-decoration: none !important;
-                }
+    }
+    
+    #user-area {
+        @include default;
+        grid-area: user-area;
+        display: grid;
+        grid-template-rows: 3rem 14rem 31rem;
+        padding: 4rem;
+        grid-gap: 4rem;
+        border-radius: 0;
+        &::after {
+            box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.15);
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: 'Raleway', sans-serif;
+            font-size: 5rem;
+            font-weight: 900;
+            letter-spacing: 0.1rem;
+            position: relative;
+            width: fit-content;
+            padding-right: 2rem;
+            &:hover {
                 .edit-name {
-                    display: block;
-                    height: fit-content;
-                    font-size: 1.8rem;
-                    color: white;
-                    transform: translateX(1rem);
-                    position: relative;
-                    cursor: pointer;
-                    visibility: hidden;
-                }
-                .change {
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    transform: (translate(100%, -50%));
-                    width: fit-content;
-                    font-size: 1.2rem;
-                    letter-spacing: 0;
-                    display: none;
+                    visibility: visible;
                 }
             }
-            .quote {
-                @include default;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: $borderR;
-                padding: 0.5rem 1.5rem;
-                &::after {
-                    box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
-                }
-                .section-icon {
-                    background-color: $blue1;
-                    width: 6.5rem;
-                    height: 6.5rem;
-                    padding: 1rem;
-                    border-radius: 1rem;
-                }
-                .content-area {
-                    flex: 1;
-                    padding-left: 2rem;
-                    p {
-                        font-size: 1.6rem;
-                        color: $dark;
-                        font-family: 'Raleway', sans-serif;
-                        font-weight: 900;
-                        letter-spacing: 0.1rem;
-                    }
-                    h4 {
-                        font-size: 1.8rem;
-                        font-style: italic;
-                        color: $pink2;
-                        margin: 0.8rem 0;
-                        font-weight: 400;
-                    }
-                    span {
-                        color: white;
-                        font-size: 1.7rem;
-                        margin-right: 1rem;
-                        cursor: pointer;
-                        &.heart.like {
-                            color: $pink2;
-                        }
-                    }
-                }
+            p {
+                font: inherit;
             }
-            .news {
-                @include default;
-                display: grid;
-                padding: 1.5rem;
-                border-radius: $borderR;
-                &::after {
-                    box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
-                }
-                .news-sect {
-                    width: 100%;
-                    height: 8.7rem;
-                    border-bottom: solid $grey 0.1rem;
-                    padding: 0.9rem 0 0.4rem;
-                    display: flex;
-                    &:last-child {
-                        border-bottom: none;
-                    }
-                    .newsImg {
-                        width: 6.5rem;
-                        height: 6.5rem;
-                        img {
-                            width: 6.5rem;
-                            height: 6.5rem;
-                            border-radius: 1rem;
-                            object-fit: cover;
-                        }
-                    }
-                    .news-content {
-                        flex: 1;
-                        height: 100%;
-                        padding-left: 2rem;
-                        overflow: hidden;
-                        h4 {
-                            font-size: 1.5rem;
-                            font-weight: 500;
-                            color: $blue2;
-                        }
-                        a {
-                            font-size: 1.6rem;
-                            text-decoration: none;
-                            color: $dark;
-                        }
-                    }
-                }
+            #hideText {
+                font: inherit;
+                position: absolute;
+                height: 0;
+                min-width: 10rem;
+                overflow: hidden;
+                white-space: pre;
+                letter-spacing: 0.2rem;
+            }
+            .user-name {
+                border: none;
+                outline: none;
+                background: transparent;
+                border-bottom: 0.1rem solid $blue;
+                font: inherit;
+                letter-spacing: 0.2rem;
+                width: 10rem;
+                max-width: 30rem;
+                color: $blue1;
+                text-decoration: none !important;
+            }
+            .edit-name {
+                display: block;
+                height: fit-content;
+                font-size: 1.8rem;
+                color: white;
+                transform: translateX(1rem);
+                position: relative;
+                cursor: pointer;
+                visibility: hidden;
+            }
+            .change {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: (translate(100%, -50%));
+                width: fit-content;
+                font-size: 1.2rem;
+                letter-spacing: 0;
+                display: none;
             }
         }
-        #calendar {
+        .quote {
             @include default;
-            box-shadow: none;
-            grid-area: calendar;
-            width: 88%;
-            height: 80%;
-            border-radius: $borderR;
-            display: grid;
-            grid-template-rows: 0.8fr 3fr;
-            padding: 0.4rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 1.5rem;
             &::after {
-                box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.65);
+                box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
             }
-            .calendar-head {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                font-size: 1.8rem;
-                color: $blue2;
+            .section-icon {
+                background-color: $blue1;
+                width: 6.5rem;
+                height: 6.5rem;
+                padding: 1rem;
+                border-radius: 1rem;
+            }
+            .content-area {
+                flex: 1;
+                padding-left: 2rem;
+                p {
+                    font-size: 1.6rem;
+                    letter-spacing: 0.1rem;
+                    color: $dark;
+                    font-family: 'Raleway', sans-serif;
+                    font-weight: 900;
+                }
                 h4 {
-                    width: 50%;
-                    text-align: center;
+                    font-size: 1.8rem;
+                    font-style: italic;
+                    color: $pink2;
+                    margin: 0.8rem 0;
+                    font-weight: 400;
                 }
                 span {
-                    font-size: 2.3rem;
+                    color: white;
+                    font-size: 1.7rem;
+                    margin-right: 1rem;
                     cursor: pointer;
-                }
-            }
-            .calendar-body {
-                display: grid;
-                grid-template-rows: 0.8fr 5fr;
-                z-index: 1;
-                .days {
-                    display: flex;
-                    width: 100%;
-                    font-size: 1.5rem;
-                    color: $blue2;
-                    div {
-                        display: inline-block;
-                        width: 100/7+%;
-                        text-align: center;
-                    }
-                }
-                .dates {
-                    display: grid;
-                    grid-template-rows: repeat(6, 1fr);
-                    grid-template-columns: repeat(7, 1fr);
-                    text-align: center;
-                    font-size: 1.4rem;
-                    color: $dark;
-                    div {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                    .prevDays {
-                        color: $grey;
-                    }
-                    .today {
-                        position: relative;
-                        color: white;
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            width: 3rem;
-                            height: 3rem;
-                            border-radius: 50%;
-                            top: 50%;
-                            left: 50%;
-                            background: linear-gradient(300deg, $pink1 20%, $blue 80%);
-                            transform: translate(-50%, -50%);
-                            z-index: -1;
-                        }
+                    &.heart.like {
+                        color: $pink2;
                     }
                 }
             }
         }
-        #to-do {
-            grid-area: todo;
-            width: 88%;
-            height: 100%;
-            padding: 2rem 0;
-            color: white;
+        .news {
+            @include default;
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            grid-template-rows: 1.6fr 2fr;
-            grid-template-areas: 'list tdIcon' 'list record';
-            grid-gap: 2rem;
-            .todo-icon {
-                @include default;
-                grid-area: tdIcon;
-                border-radius: 2rem;
+            padding: 1.5rem;
+            &::after {
+                box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
+            }
+            .news-sect {
                 width: 100%;
-                height: 85%;
-                font-size: 7rem;
-                color: $blue1;
+                height: 8.7rem;
+                border-bottom: solid $grey 0.1rem;
+                padding: 0.9rem 0 0.4rem;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-            .list {
-                grid-area: list;
-                height: 100%;
-                position: relative;
-                border-radius: 2rem;
-                background-image: linear-gradient(146deg, $blue1 20%, $pink1 100%);
-                background-attachment: fixed;
-                h2 {
-                    font-family: 'Raleway', sans-serif;
-                    height: 12%;
-                    font-size: 2rem;
-                    display: flex;
-                    align-items: flex-end;
-                    padding-left: 7%;
+                &:last-child {
+                    border-bottom: none;
                 }
-                .items {
-                    width: 100%;
-                    height: 64%;
-                    overflow-y: scroll;
-                    text-align: center;
-                    padding: 0.5rem 1.5rem;
-                    .single-item {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        width: 100%;
-                        height: 3.3rem;
+                .newsImg {
+                    width: 6.5rem;
+                    height: 6.5rem;
+                    img {
+                        width: 6.5rem;
+                        height: 6.5rem;
+                        border-radius: 1rem;
+                        object-fit: cover;
+                    }
+                }
+                .news-content {
+                    flex: 1;
+                    height: 100%;
+                    padding-left: 2rem;
+                    overflow: hidden;
+                    h4 {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                        color: $blue2;
+                    }
+                    a {
                         font-size: 1.6rem;
-                        color: white;
-                        .todo-content {
-                            border: none;
-                            background: transparent;
-                            outline: none;
-                            width: 70%;
-                            font-size: 1.7rem;
-                            color: white;
-                            &.done {
-                                text-decoration: line-through;
-                                text-decoration-thickness: 0.25rem;
-                                text-decoration-color: $blue;
-                            }
-                        }
-                        .check {
-                            width: 1.7rem;
-                            height: 1.7rem;
-                            outline: solid 0.2rem white;
-                            .fa-check {
-                                display: none;
-                            }
-                            &.done {
-                                .fa-check {
-                                    display: block;
-                                }
-                            }
-                        }
-                        .trash {
-                            cursor: pointer;
-                        }
-                    }
-                }
-                .write-items {
-                    @include default;
-                    position: absolute;
-                    bottom: 0;
-                    box-shadow: 0px 0px 4px 0px white;
-                    width: 100%;
-                    height: 24%;
-                    border-radius: 2rem;
-                    display: flex;
-                    align-items: center;
-                    &::after {
-                        box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
-                        filter: blur(6px);
-                    }
-                    .write-area {
-                        background: transparent;
-                        width: 80%;
-                        margin-left: 10%;
-                        border: none;
-                        outline: none;
-                        font-size: 2rem;
-                        color: black;
-                        &::placeholder {
-                            color: rgba(0, 0, 0, 0.705);
-                        }
+                        text-decoration: none;
+                        color: $dark;
                     }
                 }
             }
-            .record {
-                height: 65%;
-                grid-area: record;
-                background-image: linear-gradient(300deg, $pink2 30%, $pink1 100%);
-                background-attachment: fixed;
-                display: grid;
-                grid-template-rows: 5fr 1.5fr;
-                border-radius: 2rem;
-                position: relative;
-                z-index: 0;
-                .stat {
-                    @include default;
-                    width: 106%;
-                    height: 100%;
-                    transform: translateX(-3%);
-                    border-radius: 2rem;
+        }
+    }
+    
+    #calendar {
+        @include default;
+        box-shadow: none;
+        grid-area: calendar;
+        width: 88%;
+        height: 80%;
+        display: grid;
+        grid-template-rows: 0.8fr 3fr;
+        padding: 0.4rem 1rem;
+        &::after {
+            box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.65);
+        }
+        .calendar-head {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 1.8rem;
+            color: $blue2;
+            h4 {
+                width: 50%;
+                text-align: center;
+            }
+            span {
+                font-size: 2.3rem;
+                cursor: pointer;
+            }
+        }
+        .calendar-body {
+            display: grid;
+            grid-template-rows: 0.8fr 5fr;
+            z-index: 1;
+            .days {
+                display: flex;
+                width: 100%;
+                font-size: 1.5rem;
+                color: $blue2;
+                div {
+                    display: inline-block;
+                    width: 100/7+%;
                     text-align: center;
-                    display: grid;
-                    align-items: center;
+                }
+            }
+            .dates {
+                display: grid;
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-columns: repeat(7, 1fr);
+                text-align: center;
+                font-size: 1.4rem;
+                color: $dark;
+                div {
+                    display: flex;
                     justify-content: center;
-                    z-index: 10;
-                    &::after {
-                        box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
+                    align-items: center;
+                }
+                .prevDays {
+                    color: $grey;
+                }
+                .today {
+                    position: relative;
+                    color: white;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        background: linear-gradient(300deg, $pink1 20%, $blue 80%);
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
                     }
-                    #finished {
-                        font-size: 3.2rem;
-                        font-weight: 600;
-                        color: $blue1;
-                        z-index: 2;
-                        width: 100%;
-                    }
-                    .progress {
-                        align-self: start;
-                        width: 9rem;
-                        height: 0.5rem;
-                        background-color: white;
-                        border-radius: 2rem;
-                        .progress-bar {
-                            width: 0;
-                            height: 100%;
-                            background-color: $pink2;
-                            border-radius: 2rem;
-                            transition: 1s ease-in-out;
+                }
+            }
+        }
+    }
+    
+    #to-do {
+        grid-area: todo;
+        width: 88%;
+        height: 100%;
+        padding: 2rem 0;
+        color: white;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1.6fr 2fr;
+        grid-template-areas: 'list tdIcon' 'list record';
+        grid-gap: 2rem;
+        .todo-icon {
+            @include default;
+            grid-area: tdIcon;
+            border-radius: 2rem;
+            width: 100%;
+            height: 85%;
+            font-size: 7rem;
+            color: $blue1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .list {
+            grid-area: list;
+            height: 100%;
+            position: relative;
+            border-radius: 2rem;
+            background-image: linear-gradient(146deg, $blue1 20%, $pink1 100%);
+            background-attachment: fixed;
+            h2 {
+                font-family: 'Raleway', sans-serif;
+                height: 12%;
+                font-size: 1.8rem;
+                display: flex;
+                align-items: flex-end;
+                padding-left: 7%;
+            }
+            .items {
+                width: 100%;
+                height: 64%;
+                overflow-y: scroll;
+                text-align: center;
+                padding: 0.5rem 1.5rem;
+                .single-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 3.3rem;
+                    font-size: 1.6rem;
+                    color: white;
+                    .todo-content {
+                        border: none;
+                        background: transparent;
+                        outline: none;
+                        width: 70%;
+                        font-size: 1.7rem;
+                        color: white;
+                        &.done {
+                            text-decoration: line-through;
+                            text-decoration-thickness: 0.25rem;
+                            text-decoration-color: $blue;
                         }
                     }
+                    .check {
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        outline: solid 0.2rem white;
+                        .fa-check {
+                            display: none;
+                        }
+                        &.done {
+                            .fa-check {
+                                display: block;
+                            }
+                        }
+                    }
+                    .trash {
+                        cursor: pointer;
+                    }
                 }
-                .stat-bg {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 90%;
-                    background-color: rgba(243, 138, 138, 0.449);
-                    z-index: 1;
+            }
+            .write-items {
+                @include default;
+                position: absolute;
+                bottom: 0;
+                box-shadow: 0 0 0.4rem 0 white;
+                width: 100%;
+                height: 24%;
+                border-radius: 2rem;
+                display: flex;
+                align-items: center;
+                &::after {
+                    box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
+                    filter: blur(6px);
+                }
+                .write-area {
+                    background: transparent;
+                    width: 80%;
+                    margin-left: 10%;
+                    border: none;
+                    outline: none;
+                    font-size: 2rem;
+                    color: black;
+                    &::placeholder {
+                        color: rgba(0, 0, 0, 0.7);
+                    }
+                }
+            }
+        }
+        .record {
+            height: 65%;
+            grid-area: record;
+            background-image: linear-gradient(300deg, $pink2 30%, $pink1 100%);
+            background-attachment: fixed;
+            display: grid;
+            grid-template-rows: 5fr 1.5fr;
+            border-radius: 2rem;
+            position: relative;
+            z-index: 0;
+            .stat {
+                @include default;
+                width: 106%;
+                height: 100%;
+                transform: translateX(-3%);
+                border-radius: 2rem;
+                text-align: center;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                z-index: 10;
+                &::after {
+                    box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
+                }
+                #finished {
+                    font-size: 3.2rem;
+                    font-weight: 600;
+                    color: $blue1;
+                    z-index: 2;
+                    width: 100%;
+                }
+                .progress {
+                    align-self: start;
+                    width: 9rem;
+                    height: 0.5rem;
+                    background-color: white;
                     border-radius: 2rem;
+                    .progress-bar {
+                        width: 0;
+                        height: 100%;
+                        background-color: $pink2;
+                        border-radius: 2rem;
+                        transition: 1s ease-in-out;
+                    }
                 }
+            }
+            .stat-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 90%;
+                background-color: rgba(243, 138, 138, 0.449);
+                z-index: 1;
+                border-radius: 2rem;
             }
         }
     }

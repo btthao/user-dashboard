@@ -16,7 +16,7 @@ app.use(express.json({ limit: '1mb' }));
 
 //get quotes
 app.get('/getQuote', async(request, response) => {
-    const quote_url = 'https://api.quotable.io/random?maxLength=120';
+    const quote_url = 'https://api.quotable.io/random?maxLength=110';
     const quote_response = await fetch(quote_url);
     const quote_data = await quote_response.json();
     response.json(quote_data);

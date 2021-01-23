@@ -32,11 +32,8 @@ html {
 .container {
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
   background: inherit;
   position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   z-index: 1;
   background: transparent;
@@ -45,6 +42,9 @@ html {
   place-items: center;
   height: 64rem;
   width: 102rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   -ms-grid-columns: 62rem 40rem;
       grid-template-columns: 62rem 40rem;
   -ms-grid-rows: 28rem 36rem;
@@ -59,24 +59,24 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   z-index: -1;
+}
+
+.container::after {
+  margin: -10rem;
+  border-radius: 1.5rem;
 }
 
 #user-area {
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
   background: inherit;
   position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   z-index: 1;
   -ms-grid-row: 1;
@@ -90,6 +90,8 @@ html {
   padding: 4rem;
   grid-gap: 4rem;
   border-radius: 0;
+  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
 }
 
 #user-area::after {
@@ -99,17 +101,16 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   z-index: -1;
 }
 
 #user-area::after {
+  margin: -10rem;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.15);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.15);
 }
@@ -195,11 +196,8 @@ html {
 #user-area .quote {
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
   background: inherit;
   position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   z-index: 1;
   display: -webkit-box;
@@ -212,6 +210,9 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
 }
 
 #user-area .quote::after {
@@ -221,17 +222,17 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   z-index: -1;
 }
 
 #user-area .quote::after {
+  margin: -10rem;
+  border-radius: 1.5rem;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
           box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
 }
@@ -254,8 +255,6 @@ html {
 #user-area .quote .content-area p {
   font-size: 1.6rem;
   color: #081930;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
 }
 
 #user-area .quote .content-area h4 {
@@ -280,16 +279,16 @@ html {
 #user-area .news {
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
   background: inherit;
   position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   z-index: 1;
   display: -ms-grid;
   display: grid;
   padding: 1.5rem;
+  border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
 }
 
 #user-area .news::after {
@@ -299,17 +298,17 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   z-index: -1;
 }
 
 #user-area .news::after {
+  margin: -10rem;
+  border-radius: 1.5rem;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
           box-shadow: inset 0 0 0 10000px rgba(231, 223, 255, 0.4);
 }
@@ -365,13 +364,11 @@ html {
 #calendar {
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
   background: inherit;
   position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   z-index: 1;
+  border-radius: 1.5rem;
   -webkit-box-shadow: none;
           box-shadow: none;
   -ms-grid-row: 1;
@@ -393,17 +390,17 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   z-index: -1;
 }
 
 #calendar::after {
+  margin: -10rem;
+  border-radius: 1.5rem;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.65);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.65);
 }
@@ -525,11 +522,8 @@ html {
 #to-do .todo-icon {
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
   background: inherit;
   position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   z-index: 1;
   -ms-grid-row: 1;
@@ -549,6 +543,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
 }
 
 #to-do .todo-icon::after {
@@ -558,14 +554,17 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   z-index: -1;
+}
+
+#to-do .todo-icon::after {
+  margin: -10rem;
+  border-radius: 1.5rem;
 }
 
 #to-do .list {
@@ -652,19 +651,8 @@ html {
 }
 
 #to-do .list .write-items {
-  width: 100%;
-  height: 100%;
-  border-radius: 1.5rem;
-  background: inherit;
-  position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-  overflow: hidden;
-  z-index: 1;
   position: absolute;
   bottom: 0;
-  -webkit-box-shadow: 0 0 0.4rem 0 white;
-          box-shadow: 0 0 0.4rem 0 white;
   width: 100%;
   height: 24%;
   border-radius: 2rem;
@@ -674,30 +662,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#to-do .list .write-items::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
-  background: inherit;
-  -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-          box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
-  z-index: -1;
-}
-
-#to-do .list .write-items::after {
-  -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
-          box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
-  -webkit-filter: blur(0.6rem);
-          filter: blur(0.6rem);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 #to-do .list .write-items .write-area {
@@ -707,23 +672,23 @@ html {
   border: none;
   outline: none;
   font-size: 2rem;
-  color: black;
+  color: #081930;
 }
 
 #to-do .list .write-items .write-area::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 #to-do .list .write-items .write-area:-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 #to-do .list .write-items .write-area::-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 #to-do .list .write-items .write-area::placeholder {
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.55);
 }
 
 #to-do .record {
@@ -745,11 +710,8 @@ html {
 #to-do .record .stat {
   width: 100%;
   height: 100%;
-  border-radius: 1.5rem;
   background: inherit;
   position: relative;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   overflow: hidden;
   z-index: 1;
   width: 106%;
@@ -757,6 +719,8 @@ html {
   -webkit-transform: translateX(-3%);
           transform: translateX(-3%);
   border-radius: 2rem;
+  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
   text-align: center;
   display: -ms-grid;
   display: grid;
@@ -776,17 +740,17 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: -10rem;
-  border-radius: 1.5rem;
   background: inherit;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(1rem);
-          filter: blur(1rem);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   z-index: -1;
 }
 
 #to-do .record .stat::after {
+  margin: -10rem;
+  border-radius: 2rem;
   -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
           box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
 }

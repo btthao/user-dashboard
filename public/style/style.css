@@ -362,15 +362,8 @@ html {
 }
 
 #calendar {
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
   border-radius: 1.5rem;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.9);
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: calendar;
@@ -381,28 +374,6 @@ html {
   -ms-grid-rows: 0.8fr 3fr;
       grid-template-rows: 0.8fr 3fr;
   padding: 0.4rem 1rem;
-}
-
-#calendar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-          box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  z-index: -1;
-}
-
-#calendar::after {
-  margin: -10rem;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.65);
-          box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.65);
 }
 
 #calendar .calendar-head {
@@ -662,7 +633,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: white;
 }
 
 #to-do .list .write-items .write-area {
@@ -708,19 +679,12 @@ html {
 }
 
 #to-do .record .stat {
-  width: 100%;
-  height: 100%;
-  background: inherit;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
   width: 106%;
   height: 100%;
   -webkit-transform: translateX(-3%);
           transform: translateX(-3%);
   border-radius: 2rem;
-  -webkit-box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
-          box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+  background: #e4c2c8;
   text-align: center;
   display: -ms-grid;
   display: grid;
@@ -731,28 +695,6 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 10;
-}
-
-#to-do .record .stat::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: inherit;
-  -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-          box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.06);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  z-index: -1;
-}
-
-#to-do .record .stat::after {
-  margin: -10rem;
-  border-radius: 2rem;
-  -webkit-box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
-          box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
 }
 
 #to-do .record .stat #finished {
@@ -768,8 +710,8 @@ html {
       -ms-grid-row-align: start;
       align-self: start;
   width: 9rem;
-  height: 0.5rem;
-  background-color: white;
+  height: 0.6rem;
+  background-color: #918e8e;
   border-radius: 2rem;
 }
 
@@ -814,6 +756,7 @@ html {
 @media screen and (max-width: 500px) {
   html {
     font-size: 3px;
+    line-height: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -242,20 +242,14 @@
     }
     
     #calendar {
-        @include default;
         border-radius: 1.5rem;
-        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.9);
         grid-area: calendar;
         width: 88%;
         height: 80%;
         display: grid;
         grid-template-rows: 0.8fr 3fr;
         padding: 0.4rem 1rem;
-        &::after {
-            margin: -10rem;
-            border-radius: 1.5rem;
-            box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.65);
-        }
         .calendar-head {
             width: 100%;
             height: 100%;
@@ -420,7 +414,7 @@
                 border-radius: 2rem;
                 display: flex;
                 align-items: center;
-                background-color: rgba(255, 255, 255, 0.8);
+                background-color: white;
                 .write-area {
                     background: transparent;
                     width: 80%;
@@ -446,22 +440,16 @@
             position: relative;
             z-index: 0;
             .stat {
-                @include default;
                 width: 106%;
                 height: 100%;
                 transform: translateX(-3%);
                 border-radius: 2rem;
-                box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.8);
+                background: rgb(228, 194, 200);
                 text-align: center;
                 display: grid;
                 align-items: center;
                 justify-content: center;
                 z-index: 10;
-                &::after {
-                    margin: -10rem;
-                    border-radius: 2rem;
-                    box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.5);
-                }
                 #finished {
                     font-size: 3.2rem;
                     font-weight: 600;
@@ -472,8 +460,8 @@
                 .progress {
                     align-self: start;
                     width: 9rem;
-                    height: 0.5rem;
-                    background-color: white;
+                    height: 0.6rem;
+                    background-color: $grey;
                     border-radius: 2rem;
                     .progress-bar {
                         width: 0;
@@ -518,5 +506,6 @@
     @media screen and (max-width: 500px) {
         html {
             font-size: 3px;
+            line-height: 5px;
         }
     }

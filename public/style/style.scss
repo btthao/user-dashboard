@@ -265,6 +265,8 @@
             display: grid;
             grid-template-rows: 0.8fr 5fr;
             z-index: 1;
+            border-bottom-left-radius: $borderR;
+            border-bottom-right-radius: $borderR;
             .days {
                 display: flex;
                 width: 100%;

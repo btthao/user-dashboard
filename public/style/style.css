@@ -157,6 +157,7 @@ html {
   outline: none;
   background: transparent;
   border-bottom: 0.1rem solid #8aace0;
+  border-radius: 0;
   font: inherit;
   letter-spacing: 0.2rem;
   width: 10rem;
@@ -710,7 +711,7 @@ html {
       -ms-grid-row-align: start;
       align-self: start;
   width: 9rem;
-  height: 0.6rem;
+  height: 0.5rem;
   background-color: #918e8e;
   border-radius: 2rem;
 }

@@ -118,6 +118,7 @@
                 outline: none;
                 background: transparent;
                 border-bottom: 0.1rem solid $blue;
+                border-radius: 0;
                 font: inherit;
                 letter-spacing: 0.2rem;
                 width: 10rem;
@@ -460,7 +461,7 @@
                 .progress {
                     align-self: start;
                     width: 9rem;
-                    height: 0.6rem;
+                    height: 0.5rem;
                     background-color: $grey;
                     border-radius: 2rem;
                     .progress-bar {

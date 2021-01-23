@@ -1,13 +1,13 @@
 const express = require('express');
 const fetch = require('node-fetch');
 require('dotenv').config();
-
 const path = require('path');
+
 const app = express();
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    console.log(`listening at ${port}`);
+    console.log(`starting server at ${port}`);
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -16,7 +16,7 @@ app.use(express.json({ limit: '1mb' }));
 
 //get quotes
 app.get('/getQuote', async(request, response) => {
-    const quote_url = 'https://api.quotable.io/random?maxLength=110';
+    const quote_url = 'https://api.quotable.io/random?maxLength=100';
     const quote_response = await fetch(quote_url);
     const quote_data = await quote_response.json();
     response.json(quote_data);

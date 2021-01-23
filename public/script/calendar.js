@@ -82,7 +82,8 @@ function calendar() {
 
 
     for (i = 0; i <= allDays.length - 1; i++) {
-        if (allDays[i].textContent == new Date().getDate() &&
+        if (
+            allDays[i].textContent == new Date().getDate() &&
             currentMonth == new Date().getMonth() && currentYear == new Date().getFullYear()) {
             allDays[i].classList.add('today')
         }

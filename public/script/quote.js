@@ -10,6 +10,7 @@ async function randomQuote() {
     if (response.ok) {
         content.innerHTML = data.content;
         author.innerHTML = data.author;
+        heart.classList.remove('like');
     } else {
         content.innerHTML = 'Oops! An error has occured. No quote today :/'
         console.log(data)
@@ -25,5 +26,4 @@ heart.onclick = () => {
 
 dislike.onclick = () => {
     randomQuote();
-    heart.classList.remove('like');
 }

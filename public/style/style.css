@@ -12,6 +12,10 @@ html {
   color: #081930;
 }
 
+body {
+  background: lightpink;
+}
+
 .app {
   min-width: 100vw;
   min-height: 100vh;

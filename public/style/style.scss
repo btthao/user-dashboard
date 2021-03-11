@@ -20,6 +20,10 @@
         color: $dark;
     }
     
+    body {
+        background: lightpink;
+    }
+    
     //glass background effect
     @mixin default {
         width: 100%;

@@ -13,8 +13,10 @@ html {
 }
 
 body {
+  background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: linear-gradient(250deg, #ee8f8a 0%, #8aace0 100%);
+  background: #59b0db;
+  background-image: linear-gradient(290deg, #59b0db, #b69de6);
 }
 
 .app {
@@ -30,6 +32,7 @@ body {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  background: transparent;
 }
 
 .container {
@@ -159,13 +162,13 @@ body {
   border: none;
   outline: none;
   background: transparent;
-  border-bottom: 0.1rem solid #8aace0;
+  border-bottom: 0.1rem solid #59b0db;
   border-radius: 0;
   font: inherit;
   letter-spacing: 0.2rem;
   width: 10rem;
   max-width: 30rem;
-  color: #816ad3;
+  color: #5680e9;
   text-decoration: none !important;
 }
 
@@ -242,7 +245,7 @@ body {
 }
 
 #user-area .quote .section-icon {
-  background-color: #816ad3;
+  background-color: #5680e9;
   width: 6.5rem;
   height: 6.5rem;
   padding: 1rem;
@@ -264,7 +267,7 @@ body {
 #user-area .quote .content-area h4 {
   font-size: 1.8rem;
   font-style: italic;
-  color: #df647b;
+  color: #7e5fc5;
   margin: 0.8rem 0;
   font-weight: 400;
 }
@@ -277,7 +280,7 @@ body {
 }
 
 #user-area .quote .content-area span.heart.like {
-  color: #df647b;
+  color: #7e5fc5;
 }
 
 #user-area .news {
@@ -470,7 +473,8 @@ body {
   border-radius: 50%;
   top: 50%;
   left: 50%;
-  background: linear-gradient(300deg, #f59ba1 20%, #8aace0 80%);
+  background: #B9B8FA;
+  background: linear-gradient(250deg, #B9B8FA, #59b0db);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: -1;
@@ -508,7 +512,7 @@ body {
   width: 100%;
   height: 85%;
   font-size: 7rem;
-  color: #816ad3;
+  color: #5680e9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -550,7 +554,8 @@ body {
   height: 100%;
   position: relative;
   border-radius: 2rem;
-  background-image: linear-gradient(146deg, #816ad3 20%, #f59ba1 100%);
+  background: #B9B8FA;
+  background: linear-gradient(146deg, #5680e9, #B9B8FA);
   background-attachment: fixed;
 }
 
@@ -603,8 +608,8 @@ body {
 #to-do .list .items .single-item .todo-content.done {
   text-decoration: line-through;
   text-decoration-thickness: 0.25rem;
-  -webkit-text-decoration-color: #8aace0;
-          text-decoration-color: #8aace0;
+  -webkit-text-decoration-color: #59b0db;
+          text-decoration-color: #59b0db;
 }
 
 #to-do .list .items .single-item .check {
@@ -671,7 +676,7 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: record;
-  background-image: linear-gradient(300deg, #df647b 30%, #f59ba1 100%);
+  background-image: linear-gradient(300deg, #7e5fc5, #B9B8FA);
   background-attachment: fixed;
   display: -ms-grid;
   display: grid;
@@ -704,7 +709,7 @@ body {
 #to-do .record .stat #finished {
   font-size: 3.2rem;
   font-weight: 600;
-  color: #816ad3;
+  color: #5680e9;
   z-index: 2;
   width: 100%;
 }
@@ -722,7 +727,7 @@ body {
 #to-do .record .stat .progress .progress-bar {
   width: 0;
   height: 100%;
-  background-color: #df647b;
+  background-color: #7e5fc5;
   border-radius: 2rem;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
@@ -734,7 +739,7 @@ body {
   left: 0;
   height: 100%;
   width: 90%;
-  background-color: rgba(243, 138, 138, 0.449);
+  background-color: rgba(167, 147, 214, 0.449);
   z-index: 1;
   border-radius: 2rem;
 }
@@ -745,19 +750,19 @@ body {
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 900px) {
   html {
     font-size: 7.5px;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 815px) {
   html {
     font-size: 5px;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   html {
     font-size: 3px;
     line-height: 5.4px;
